@@ -269,3 +269,53 @@ a {
   color: var(--red-color);
 }
 /* End Latest Tasks */
+/* Start Last Project */
+.last-project ul::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  left: 10px;
+  background-color: var(--blue-color);
+}
+.last-project ul li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: white;
+  outline: 2px solid var(--blue-color);
+  margin-right: 15px;
+  position: relative;
+  z-index: 1;
+}
+.last-project ul li.done::before {
+  background-color: var(--blue-color);
+}
+.last-project ul li.current::before {
+  animation: change-color 0.6s infinite alternate;
+}
+.last-project img {
+  position: absolute;
+  width: 160px;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+/* End Last Project */
+/* Start Project Tabel */
+.projects tbody tr:hover {
+  background-color: #faf7f7;
+}
+/* End Project Tabel */
+/* Start Animation */
+@keyframes change-color {
+  from {
+    background-color: var(--blue-color);
+  }
+  to {
+    background-color: white;
+  }
+}
+/* End Animation */
