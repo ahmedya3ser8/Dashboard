@@ -309,6 +309,54 @@ a {
   background-color: #faf7f7;
 }
 /* End Project Tabel */
+/* Start Settings Page */
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: var(--main-duration);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  left: 50px;
+  color: var(--blue-color);
+}
+/* End Settings Page */
+/* Start General Info */
+.settings-page .email {
+  display: inline-flex;
+  width: calc(100% - 80px);
+}
+.settings-page :disabled {
+  cursor: no-drop;
+  background-color: #f0f4f8;
+  color: #bbb;
+}
+/* End General Info */
+/* Start Security Info */
+.sec-box .button:hover {
+  background-color: var(--blue-alt);
+}
+/* End Security Info */
+/* Start Social Info */
+.settings-page .social-boxes > div:focus-within i {
+  color: black;
+}
+/* End Social Info */
 /* Start Animation */
 @keyframes change-color {
   from {
