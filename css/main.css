@@ -141,79 +141,24 @@ a {
 }
 /* End Content */
 /* Start Welcome */
-.welcome .info img {
-  width: 200px;
-  margin-bottom: -10px;
-}
-.welcome .avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 2px solid white;
-  margin-left: 20px;
-  margin-top: -32px;
-  box-shadow: 0 0 5px #ddd;
-  padding: 3px;
-}
-.welcome .body {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-.welcome .body > div {
-  flex: 1;
-}
-.welcome .visit {
-  margin: 0 15px 15px auto;
-}
 .welcome .visit:hover {
   background-color: var(--blue-alt);
 }
 @media (max-width: 767px) {
   .welcome .info {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
   .welcome .avatar {
     margin-left: 0;
   }
-  .welcome .body > div:not(:last-child) {
-    margin-bottom: 20px;
-  }
 }
 /* End Welcome */
 /* Start quick-draft */
-.quick-draft textarea {
-  resize: none;
-  height: 200px;
-}
-.quick-draft .save {
-  margin-left: auto;
-  cursor: pointer;
-}
 .quick-draft .save:hover {
   background-color: var(--blue-alt);
 }
 /* End quick-draft */
 /* Start Target */
-.targets .target-row .icon {
-  width: 80px;
-  height: 80px;
-  margin-right: 15px;
-}
-.targets .details .progress > span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-}
-.targets .details .progress > span span {
-  position: absolute;
-  right: -16px;
-  bottom: 16px;
-  color: white;
-  padding: 2px 5px;
-  border-radius: 6px;
-  font-size: 12px;
-}
 .targets .details .progress > span span::after {
   content: "";
   position: absolute;
@@ -233,30 +178,7 @@ a {
 .targets .details .progress > .green span::after {
   border-top-color: var(--green-color);
 }
-.blue .icon,
-.blue .progress {
-  background-color: rgb(0 117 255/ 20%);
-}
-.orange .icon,
-.orange .progress {
-  background-color: rgb(245 158 11/ 20%);
-}
-.green .icon,
-.green .progress {
-  background-color: rgb(34 197 94/ 20%);
-}
 /* End Target */
-/* Start Tickets */
-.tickets .box {
-  border: 1px solid #ccc;
-  width: calc(50% - 10px);
-}
-@media (max-width: 767px) {
-  .tickets .box {
-    width: 100%;
-  }
-}
-/* End Tickets */
 /* Start Latest News */
 @media (max-width: 767px) {
   .latest-news .news-row {
@@ -296,13 +218,6 @@ a {
 .last-project ul li.current::before {
   animation: change-color 0.6s infinite alternate;
 }
-.last-project img {
-  position: absolute;
-  width: 160px;
-  right: 0;
-  bottom: 0;
-  opacity: 0.1;
-}
 /* End Last Project */
 /* Start Project Tabel */
 .projects tbody tr:hover {
@@ -335,16 +250,9 @@ a {
   left: 50px;
   color: var(--blue-color);
 }
-/* End Settings Page */
 /* Start General Info */
 .settings-page .email {
   display: inline-flex;
-  width: calc(100% - 80px);
-}
-.settings-page :disabled {
-  cursor: no-drop;
-  background-color: #f0f4f8;
-  color: #bbb;
 }
 /* End General Info */
 /* Start Security Info */
@@ -357,6 +265,79 @@ a {
   color: black;
 }
 /* End Social Info */
+/* Start Widgets control */
+.widgets-control .control label::before,
+.widgets-control .control label::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  border-radius: 4px;
+}
+.widgets-control .control label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey-color);
+}
+.widgets-control .control label:hover::before {
+  border-color: var(--blue-alt);
+}
+.widgets-control .control label::after {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 900;
+  background-color: var(--blue-color);
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: var(--main-duration);
+}
+.widgets-control .control input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
+}
+/* End Widgets control */
+/* Start Backup Manager */
+.backup-control .date label::before,
+.backup-control .date label::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.backup-control .date label::before {
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--grey-color);
+  margin-top: -11px;
+}
+.backup-control .date label::after {
+  left: 5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--blue-color);
+  transition: var(--main-duration);
+  transform: scale(0);
+}
+.backup-control .date input[type="radio"]:checked + label::before {
+  border-color: var(--blue-color);
+}
+.backup-control .date input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+.backup-control .servers input[type="radio"]:checked + .server {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+/* End Backup Manager */
+/* End Settings Page */
 /* Start Animation */
 @keyframes change-color {
   from {
