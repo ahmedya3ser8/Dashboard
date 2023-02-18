@@ -436,6 +436,38 @@ a {
   z-index: 999;
 }
 /* End Projects Page */
+/* Start Courses Page */
+@media (max-width: 767px) {
+  .courses-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-right: 10px;
+    margin-left: 10px;
+    gap: 10px;
+  }
+}
+/* End Courses Page */
+/* Start Friends Page */
+@media (max-width: 767px) {
+  .friends-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-right: 10px;
+    margin-left: 10px;
+    gap: 10px;
+  }
+}
+.friends-page .contact i:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+/* End Friends Page */
+/* Start Files Page */
+.files-page .files-stats .upload:hover {
+  background-color: var(--blue-alt);
+}
+.files-page .files-stats .upload:hover i {
+  animation: go-up 0.7s infinite;
+}
+/* End Files Page */
 /* Start Animation */
 @keyframes change-color {
   from {
@@ -443,6 +475,15 @@ a {
   }
   to {
     background-color: white;
+  }
+}
+@keyframes go-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
 /* End Animation */

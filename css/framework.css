@@ -39,6 +39,9 @@
 .grid-column {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
+.grid-column-250 {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
 @media (max-width: 767px) {
   .grid-mobile {
     grid-template-columns: minmax(100px, 1fr);
@@ -118,6 +121,9 @@
 .p-3-8 {
   padding: 3px 8px;
 }
+.p-10-15 {
+  padding: 10px 15px;
+}
 .p-10 {
   padding: 10px;
 }
@@ -192,6 +198,9 @@
 }
 .mr-0 {
   margin-right: 0;
+}
+.mr-5 {
+  margin-right: 5px;
 }
 .mr-10 {
   margin-right: 10px;
@@ -330,6 +339,9 @@
 .bg-green-progress {
   background-color: rgb(34 197 94/ 20%);
 }
+.bg-red-icon {
+  background-color: rgb(244 67 54/ 20%);
+}
 .c-black {
   color: black;
 }
@@ -366,6 +378,9 @@
 .c-bbb {
   color: #bbb;
 }
+.c-666 {
+  color: #666;
+}
 /* End bg and color */
 /* Start postion */
 .p-relative {
@@ -379,6 +394,15 @@
 }
 .top-10 {
   top: 10px;
+}
+.top-13- {
+  top: -13px;
+}
+.top-20 {
+  top: 20px;
+}
+.top-half {
+  top: 50%;
 }
 .right-0 {
   right: 0;
@@ -398,17 +422,32 @@
 .left-0 {
   left: 0;
 }
+.left-10 {
+  left: 10px;
+}
+.left-20 {
+  left: 20px;
+}
 .left-25 {
   left: 25px;
 }
 .left-50 {
   left: 50px;
 }
+.left-half {
+  left: 50%;
+}
 .left-75 {
   left: 75px;
 }
 .left-100 {
   left: 100px;
+}
+.translatex-50 {
+  transform: translateX(-50%);
+}
+.translatey-50 {
+  transform: translateY(-50%);
 }
 /* End postion */
 /* Start Fonts */
@@ -429,6 +468,9 @@
 }
 .fs-25 {
   font-size: 25px;
+}
+.fs-40 {
+  font-size: 40px;
 }
 .fw-bold {
   font-weight: bold;
@@ -541,6 +583,9 @@
 .w-full {
   width: 100%;
 }
+.max-w-100 {
+  max-width: 100%;
+}
 .w-fit {
   width: fit-content;
 }
@@ -586,6 +631,9 @@
 .w-250 {
   width: 250px;
 }
+.min-w-260 {
+  min-width: 260px;
+}
 .w-300 {
   width: 300px;
 }
@@ -607,6 +655,9 @@
 .h-15 {
   height: 15px;
 }
+.h-27 {
+  height: 27px;
+}
 .h-32 {
   height: 32px;
 }
@@ -625,6 +676,9 @@
 .min-h-80 {
   min-height: 80px;
 }
+.h-100 {
+  height: 100px;
+}
 .h-120 {
   height: 120px;
 }
@@ -642,6 +696,9 @@
 }
 .line-height {
   line-height: 1.8;
+}
+.line-h {
+  line-height: 1.6;
 }
 .flow-hid {
   overflow: hidden;
@@ -675,6 +732,9 @@
 }
 .opacity-1 {
   opacity: 0.1;
+}
+.opacity-2 {
+  opacity: 0.2;
 }
 .opacity-3 {
   opacity: 0.3;
