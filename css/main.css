@@ -461,13 +461,39 @@ a {
 }
 /* End Friends Page */
 /* Start Files Page */
+.files-page {
+  flex-direction: row-reverse;
+  align-items: self-start;
+}
+@media (max-width: 767px) {
+  .files-page {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
 .files-page .files-stats .upload:hover {
   background-color: var(--blue-alt);
 }
 .files-page .files-stats .upload:hover i {
   animation: go-up 0.7s infinite;
 }
+.files-page .files-content {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.files-page .files-content .file:hover img {
+  transform: rotate(5deg);
+}
 /* End Files Page */
+/* Start Plans Page */
+@media (max-width: 767px) {
+  .plans-page {
+    grid-template-columns: minmax(250px, 1fr);
+    margin-right: 10px;
+    margin-left: 10px;
+    gap: 10px;
+  }
+}
+/* End Plans Page */
 /* Start Animation */
 @keyframes change-color {
   from {
